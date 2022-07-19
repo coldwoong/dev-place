@@ -1,96 +1,54 @@
-baseURL = "https://coldwoong.github.io/"
-title = "Dev-Place"
-author = "coldwoong"
-languageCode = "ko"
-DefaultContentLanguage = "ko"
+baseURL = "https://hugo-paper.vercel.app/"
+# title = "Hugo Themes"
+author = "Steve Francia"
+copyright = "Copyright © 2008–2019, Steve Francia and the lee.so; all rights reserved."
+paginate = 3
+languageCode = "en"
+DefaultContentLanguage = "en"
 enableInlineShortcodes = true
-theme = "Blonde"
-enableRobotsTXT = true
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
 
-# Please enable this feature if the site is available in Japanese, Chinese or Korean.
-#hasCJKLanguage = true
-
-# If you're using Google Analytics, you can enable this feature.
-#googleAnalytics = "G-1234567890"
-
-# Disqus Comment System
-#disqusShortname = ""
+# ------------------------------
+theme = "hugo-paper"
+title = "Paper"
 
 [params]
-# Base color of the website.
-# https://tailwindcss.com/docs/background-color
-base_color = "bg-gray-800"
+  twitter = 'nanxiaobei'
+  github = 'nanxiaobei'
+  instagram = 'nan.xiaobei'
+  rss = true
 
-#Site description
-description = "Blonde theme for Hugo."
+  avatar = 'nanxiaobei@gmail.com'
+  name = 'Lee'
+  bio = 'Discover fresh context'
 
-# The number of articles to be displayed on a single page.
-paginator_pages = "5"
+# ------------------------------
 
-# Enable this if you want the archive list to be in a drop-down format.
-archive_dropdown = "false"
-
-# Number of tags to be displayed.
-tagsLimit = 20
-
-# Dark mode by default : dark
-# Light mode by default : light
-darkmode = "dark"
-
-  [params.post]
-    # Show thumbnails
-    thumbnail = true
-
-    # Disable the "NO IMAGE" image.
-    noimage = true
-
-    # See the Tailwind CSS documentation to set it up.
-    # Recommended settings are h-32 to h-48.
-    # https://tailwindcss.com/docs/height
-    thumbnail_height = "lg:h-44"
-
-    # https://tailwindcss.com/docs/width
-    thumbnail_width = "lg:w-auto"
-
-    # Number of characters in description
-    description = "130"
-
-  [params.widgets]
-    # Display widgets
-    display = true
-
-    # Order of widgets to display
-    widgets = ["search", "archive", "category", "tags", "recent"]
-
-# If you're using Yandex.Metrica, you can enable this feature.
-#[params.analytics.yandexmetrica]
-#    enabled = true
-#    tagNumber = ''
+# needed to  render raw HTML (e.g. <sub>, <sup>, <kbd>, <mark>)
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [menu]
-
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
 
   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 2
-
+    weight = 10
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = 3
+    weight = 10
 
 [taxonomies]
 category = "categories"
 tag = "tags"
-archive = "archives"
+series = "series"
 
 [privacy]
 

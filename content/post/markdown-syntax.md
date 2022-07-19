@@ -1,5 +1,5 @@
 +++
-author = "Hugo Authors"
+author = "lee.so"
 title = "Markdown Syntax Guide"
 date = "2019-03-11"
 description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
@@ -7,7 +7,6 @@ tags = [
     "markdown",
     "css",
     "html",
-    "themes",
 ]
 categories = [
     "themes",
@@ -15,7 +14,6 @@ categories = [
 ]
 series = ["Themes Guide"]
 aliases = ["migrate-from-jekyl"]
-archives = ["2019/03"]
 +++
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
@@ -138,14 +136,13 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
   * Cheese
 
 ## Other Elements — abbr, sub, sup, kbd, mark
-{{< rawhtml >}}
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.</br>
 
-H<sub>2</sub>O</br>
+<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
 
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></br>
+H<sub>2</sub>O
 
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.</br>
+X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.</br>
-{{< /rawhtml >}}
+Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
+
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
