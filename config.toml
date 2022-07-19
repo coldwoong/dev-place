@@ -1,6 +1,6 @@
-baseURL = "https://coldwoong.github.io/"
+baseURL = "https://hugo-paper.vercel.app/"
 # title = "Hugo Themes"
-author = "coldwoong"
+author = "Steve Francia"
 copyright = "Copyright © 2008–2019, Steve Francia and the lee.so; all rights reserved."
 paginate = 3
 languageCode = "en"
@@ -11,18 +11,18 @@ enableInlineShortcodes = true
 ignoreErrors = ["error-remote-getjson"]
 
 # ------------------------------
-theme = "paper"
-title = "Dev-Place"
+theme = "hugo-paper"
+title = "Paper"
 
 [params]
-#twitter = 'nanxiaobei'
-  github = 'coldwoong'
-  instagram = 'cold_woong.moon'
+  twitter = 'nanxiaobei'
+  github = 'nanxiaobei'
+  instagram = 'nan.xiaobei'
   rss = true
 
-  avatar = 'intajon@gmail.com'
-  name = 'ColdWoong'
-  bio = '"어 이게 왜 되지?" / "어 이게 왜 안되지?" 가 없는 것을 목표로.'
+  avatar = 'nanxiaobei@gmail.com'
+  name = 'Lee'
+  bio = 'Discover fresh context'
 
 # ------------------------------
 

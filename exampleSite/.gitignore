@@ -11,8 +11,6 @@ _test
 *.[568vq]
 [568vq].out
 
-go.mod
-go.sum
 *.cgo1.go
 *.cgo2.c
 _cgo_defun.c
@@ -24,7 +22,9 @@ _testmain.go
 *.exe
 *.test
 
-/public
-/themes
+public
+themes
+resources
+
+assets/jsconfig.json
 .DS_Store
-.hugo_build.lock

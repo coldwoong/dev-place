@@ -1,38 +1,28 @@
 <!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" dir="{{ default `ltr` .Language.LanguageDirection }}">
+    <head>
+        {{- partial "head/head.html" . -}}
+        {{- block "head" . -}}{{ end }}
+    </head>
+    <body class="{{ block `body-class` . }}{{ end }}">
+        {{- partial "head/colorScheme" . -}}
 
-{{ $.Scratch.Delete "social_list" }}<!---->
-{{ $.Scratch.Delete "avatar_url" }}<!---->
-
-<!-- social_list -->
-{{ $socialParams := slice "twitter" "github" "instagram" "rss" }}<!---->
-{{ range $socialParams }}<!---->
-{{ if isset site.Params . }}<!---->
-{{ $.Scratch.Add "social_list" (slice .) }}<!---->
-{{ end }}<!---->
-{{ end }}<!---->
-
-<!-- avatar_url -->
-{{ if site.Params.avatar }}<!---->
-{{ if in site.Params.avatar "http" }}<!---->
-{{ $.Scratch.Set "avatar_url" site.Params.avatar }}<!---->
-{{ else }}<!---->
-{{ $md5 := (md5 site.Params.avatar) }}<!---->
-{{ $url := print "https://www.gravatar.com/avatar/" $md5 "?s=160&d=identicon" }}<!---->
-{{ $.Scratch.Set "avatar_url" $url }}<!---->
-{{ end }}<!---->
-{{ end }}<!---->
-
-<html class="not-ready text-sm lg:text-base" lang="{{ site.LanguageCode }}">
-  {{ partial "head.html" . }}
-  <body class="text-black duration-200 ease-out dark:text-white">
-    {{ partial "header.html" . }}
-
-    <main
-      class="prose prose-zinc relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-16 pb-40 dark:prose-invert"
-    >
-      {{ block "main" . }}{{ end }}
-    </main>
-
-    {{ partial "footer.html" . }}
-  </body>
+        {{/* The container is wider when there's any activated widget */}}
+        {{- $hasWidget := false -}}
+        {{- range .Site.Params.widgets -}}
+            {{- if gt (len .) 0 -}}
+                {{- $hasWidget = true -}}
+            {{- end -}}
+        {{- end -}}
+        <div class="container main-container flex on-phone--column {{ if $hasWidget }}extended{{ else }}compact{{ end }}">
+            {{- block "left-sidebar" . -}}
+                {{ partial "sidebar/left.html" . }}
+            {{- end -}}
+            <main class="main full-width">
+                {{- block "main" . }}{{- end }}
+            </main>
+            {{- block "right-sidebar" . -}}{{ end }}
+        </div>
+        {{ partial "footer/include.html" . }}
+    </body>
 </html>
