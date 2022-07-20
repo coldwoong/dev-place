@@ -1,27 +1,27 @@
-baseURL = "https://hugo-paper.vercel.app/"
+baseURL = "https://coldwoong.github.io/"
 # title = "Hugo Themes"
-author = "Steve Francia"
-copyright = "Copyright © 2008–2019, Steve Francia and the lee.so; all rights reserved."
+author = "coldwoong"
+copyright = "Copyright © 2008–2019, coldwoong.github.io; all rights reserved."
 paginate = 3
-languageCode = "en"
-DefaultContentLanguage = "en"
+languageCode = "ko"
+DefaultContentLanguage = "ko"
 enableInlineShortcodes = true
 # prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
 ignoreErrors = ["error-remote-getjson"]
 
 # ------------------------------
-theme = "hugo-paper"
-title = "Paper"
+theme = "Stack"
+title = "Dev-Place"
 
 [params]
-  twitter = 'nanxiaobei'
-  github = 'nanxiaobei'
-  instagram = 'nan.xiaobei'
+#twitter = 'nanxiaobei'
+  github = 'coldwoong'
+  instagram = 'cold_woong.moon'
   rss = true
 
-  avatar = 'nanxiaobei@gmail.com'
-  name = 'Lee'
+  avatar = 'intajon@gmail.com'
+  name = 'ColdWoong'
   bio = 'Discover fresh context'
 
 # ------------------------------

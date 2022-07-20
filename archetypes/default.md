@@ -1,9 +1,11 @@
 ---
-author: ""
-title: ""
+title: "{{ replace .Name "-" " " | title }}"
+description: 
+date: {{ .Date }}
+image: 
+math: 
+license: 
+hidden: false
+comments: true
 draft: true
-date: {{ dateFormat "2006-01-02" .Date }}
-description: ""
-tags: ["", ""]
-archives: ["{{ dateFormat "2006/01" .Date }}"]
 ---
